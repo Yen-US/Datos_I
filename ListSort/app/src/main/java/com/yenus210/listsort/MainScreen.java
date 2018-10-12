@@ -8,15 +8,17 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class MainScreen extends AppCompatActivity {
 
-    EditText lista;
+    EditText dato, n;
     TextView lOrd;
-    Button bubble, shell;
+    Button bubble, shell, add;
     ImageView gráficas;
-    String lista_S;
-    String lista_P;
     int lista_A[];
+    String lista_P;
+    int len, n_dato, i=0;
 
     //ShellSort
     public void sort(int arr[]) {
@@ -47,31 +49,40 @@ public class MainScreen extends AppCompatActivity {
         setContentView(R.layout.main_screen);
 
         lOrd = (TextView)findViewById(R.id.lOrd);
-        lista = (EditText)findViewById(R.id.lista);
+        dato = (EditText)findViewById(R.id.dato);
         bubble = (Button)findViewById(R.id.bubble);
         shell = (Button)findViewById(R.id.shell);
         gráficas = (ImageView)findViewById(R.id.gráficas);
+        add=(Button)findViewById(R.id.add);
+        n=(EditText)findViewById(R.id.n);
 
+        add.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                len=Integer.parseInt(String.valueOf(n.getText()));
+                n_dato=Integer.parseInt(String.valueOf(dato.getText()));
+                if (i==0){
+                    lista_A = new int[len];
+                    lista_A[i]=n_dato;
+                    i++;
+                }else if (i>0 && i<len) {
+                    lista_A[i] = n_dato;
+                    i++;
+                }else if (i==len) {
+                    lOrd.setText("Escoja el ordenamiento");
+                }
+
+            }
+        });
         bubble.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                //cod;
+
 
             }
         });
 
         shell.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-
-                lista_S = String.valueOf(lista.getText());
-                lista_A=new int[(lista_S.length())/2];
-                for (int i=0; i<lista_S.length();i++){
-                    char l = lista_S.charAt(i);
-                    if (l==','||l==' '||l=='.'){
-
-                    }else{
-                        lista_A[i/2]=Integer.valueOf(l);
-                    }
-                }sort(lista_A);
+                sort(lista_A);
             }
         });
     }

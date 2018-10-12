@@ -6,43 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".MainScreen">
 
-    <EditText
-        android:id="@+id/lista"
-        android:layout_width="286dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Ingrese su lista separada por espacios"
-        android:inputType="textPersonName"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bienvenido" />
-
     <TextView
         android:id="@+id/Bienvenido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Bienvenido"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/lOrd"
-        android:layout_width="257dp"
+        android:layout_width="207dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="    Lista Ordenada"
+        android:layout_marginTop="76dp"
+        android:text="Lista Ordenada"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lista" />
+        app:layout_constraintTop_toBottomOf="@+id/Bienvenido" />
 
     <ImageView
         android:id="@+id/gráficas"
@@ -52,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lOrd"
-        app:layout_constraintVertical_bias="0.447"
+        app:layout_constraintVertical_bias="0.326"
         app:srcCompat="@android:drawable/screen_background_light_transparent" />
 
     <Button
@@ -78,4 +65,47 @@
         app:layout_constraintStart_toEndOf="@+id/bubble"
         app:layout_constraintTop_toBottomOf="@+id/gráficas"
         app:layout_constraintVertical_bias="0.961" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar"
+        app:layout_constraintBottom_toTopOf="@+id/bubble"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gráficas"
+        app:layout_constraintVertical_bias="0.919" />
+
+    <EditText
+        android:id="@+id/dato"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="dato"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/n"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bienvenido" />
+
+    <EditText
+        android:id="@+id/n"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
+        android:ems="10"
+        android:hint="n"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/lOrd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bienvenido"
+        app:layout_constraintVertical_bias="0.363" />
 </android.support.constraint.ConstraintLayout>

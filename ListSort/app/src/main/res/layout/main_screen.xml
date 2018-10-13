@@ -33,13 +33,13 @@
 
     <ImageView
         android:id="@+id/gráficas"
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
+        android:layout_width="375dp"
+        android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lOrd"
-        app:layout_constraintVertical_bias="0.326"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/screen_background_light_transparent" />
 
     <Button
